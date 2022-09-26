@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Miscellanious",
+    "available": true,
+    "difficulty": "Medium",
+    "csv_file": "miscellaneous"
+  },
+  {
+    "name": "AZURE",
+    "available": true,
+    "difficulty": "Difficult",
+    "csv_file": "Azure_Questions"
+  },
+  {
+    "name": "POWER APPS",
+    "available": true,
+    "difficulty": "Difficult",
+    "csv_file": "PowerApps_Questions"
+  },
+  {
+    "name": "MENDIX",
+    "available": false,
+    "difficulty": "Difficult",
+    "csv_file": "miscellaneous"
+  }
+  ,
+  {
+    "name": "DevXOps",
+    "available": false,
+    "difficulty": "Difficult",
+    "csv_file": "miscellaneous"
+  }
+]

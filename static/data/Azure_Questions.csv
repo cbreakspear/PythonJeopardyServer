@@ -1,0 +1,31 @@
+﻿Category,Value,Question,Reply,Figure
+AZURE GENERAL,100,The concept that means storing and accessing data on the internet,What is Cloud Computing,
+AZURE GENERAL,200, This belongs to a specific organization and no other organization can access the same Cloud,What is a Private Cloud,
+AZURE GENERAL,300,This happens when you scale up your pool by adding more systems/machines into your pool of resources.,What is Horizontal scaling,
+AZURE GENERAL,400,"This happens when and application is delivered via the internet. No need to install, or maintain the software.",What is Software as a Service (SaaS),cloudcomputingservices.jpg
+AZURE GENERAL,500,A single portal or a single place where you are accessing and managing all your applications.,What is Azure Portal,
+AZURE GENERAL,600,This is used to store massive amounts of unstructured data.,What is Blob Storage,bstorage.jpg
+AZURE ARCHITECTURE,100,"This resource is answerable for a solitary application or technology product, including both hardware and software.",What is a Solution Architect,
+AZURE ARCHITECTURE,200,"This person is answerable for the general plan of an application, especially when there are many subcomponents that need to work together.",What is a Software Architect,
+AZURE ARCHITECTURE,300,"Known as public Cloud, the hybrid Cloud, and the private Cloud.",What are Cloud Deployment Models,cdm.jpg
+AZURE ARCHITECTURE,400,The distribution of traffic as per the different traffic-routing methods and consistent monitoring of automatic failover and endpoint health upon failure of endpoints.,What is Traffic Manager,
+AZURE ARCHITECTURE,500,This allows you to provisioning management and deployment services on Azure.,What is Azure Resource Manager (ARM),
+AZURE ARCHITECTURE,600,These are common delivery models within all CSP's as well as Azure,"What are Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS), Software-as-a-Service (SaaS)",
+AZURE SERVICES,100,This is a fully isolated and dedicated environment for securely running apps at a high scale.,What is an App Service,
+AZURE SERVICES,200,"A fully managed service that provides the infrastructure (like CPU, RAM etc) for hosting App Services",What is an App Service Plan,
+AZURE SERVICES,300,Within an app service this property prevents your app from being idled out due to inactivity,What is Always on,
+AZURE SERVICES,400,"When this service is turned on, the request from a client will always reach the same server for that entire session.",What is ARR affinity,
+AZURE SERVICES,500,"When you use this feature, you achieve zero downtime deployment in Azure app service.",What are Deployment Slots?,
+AZURE SERVICES,600,"This service allows you to deliver text, audio, video images to the customer in a much faster way by delivering the content from the server nearest to the user",What is Azure CDN,cdn.jpg
+AZURE DEVOPS,100,Used for code management and various versions by using the lifecycle of the development.,What are Repos,
+AZURE DEVOPS,200," Used to manage the projects of software, It offers various sets of abilities like dashboards, reporting, scrum and kanban. Its essential feature contains queries, backlogs, sprints, dashboards and work items.",What are Boards,
+AZURE DEVOPS,300,Used to build and test the projects code automatically.,What are Pipelines,
+AZURE DEVOPS,400,"This technology offers a simple software code approach which associates the dependencies, package and the configuration in a solitary project.",What are containers,
+AZURE DEVOPS,500,This service helps in identifying the performance bottlenecks as well as the failure hotspots in different components of the multi-tier applications.,What is an Application Map,
+AZURE DEVOPS,600,"This service includes the access control list which may permit or neglect the traffic of a network for subnets, they may be associated with an NIC of individuals that connect with a subnet or with the subnets.",What is an NSG,
+AZURE SECURITY,100,This is a cloud workload protection solution that provides security management and advanced threat protection across hybrid cloud workloads.,What is Microsoft Defender for Cloud,
+AZURE SECURITY,200,"This is a scalable, cloud-native solution that delivers intelligent security analytics and threat intelligence across the enterprise.",Microsoft Sentinel,
+AZURE SECURITY,300,"These are secure secrets store for the passwords, connection strings, and other information you need to keep your apps working.",Azure Key Vault,
+AZURE SECURITY,400,"A monitoring service that collects telemetry and other data, and provides a query language and analytics engine to deliver operational insights for your apps and resources. Can be used alone or with other services such as Defender for Cloud.",Azure Monitor logs,
+AZURE SECURITY,500,A service that helps developers and testers quickly create environments in Azure while minimizing waste and controlling cost.,Azure Dev/Test Labs,
+AZURE SECURITY,600,A security feature that automatically encrypts your data in Azure storage.,Azure Storage Service Encryption,

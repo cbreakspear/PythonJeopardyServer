@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
+    <script src="/static/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    
+    <title>Jeopardy</title>
+    <style>
+      .hidden {
+          display: none;
+      }
+      .visible {
+          display: inherit;
+      }
+    </style>
+    <script>
+      function markAnswered(btn){
+        var $col = $(btn).closest('.col');
+        var $card = $col.find('.card');
+        var $modal = $(btn).closest('.modal');
+        $card.removeClass('bg-secondary');
+        $card.addClass('bg-light');
+        $card.removeClass('text-white');
+        $card.addClass('text-black');
+        $modal.modal('hide');
+      }
+
+      function revealAnswer(btn){
+        var $modal = $(btn).closest('.modal');
+        var $answer = $modal.find('.answer');
+        if($answer.hasClass('hidden')){
+          $answer.removeClass('hidden');
+          $(btn).html("Hide reply");
+        } else {
+          $answer.addClass('hidden');
+          $(btn).html("Reply");
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- First row with categories -->
+      <div class="row categories no-gutters">
+        <!-- Category card -->
+        {% for category in categories %}
+        <div class="col">
+          <div class="card bg-primary text-white font-weight-bold text-center">
+            <p class="card-text m-4">
+              {{ category }}
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+        <!-- Category card ends -->
+      </div>
+      <!-- Category cards ends -->
+
+      <!-- Question row -->
+      {% for row in rows %}
+      <div class="row no-gutters">
+        <!-- Question card -->
+        {% for question in row %}
+        <div class="col">
+          <div class="card bg-secondary text-white font-weight-bold text-center"
+            data-toggle="modal" data-target="{{".q" ~ question.id}}"> <!-- Change q1 -->
+            <p class="card-text m-4 points">
+                {{ question.value }}
+            </p>
+          </div>
+          <div class="{{"modal fade q" ~ question.id}}" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true"> <!-- Change q1 -->
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <p class="m-4 text-center">
+                    {{ question.question}}
+                    {% if question.img != '' %}
+                    <img class="img-fluid" src= "/static/images/{{question.img}}" > <!-- Change img, if clause -->
+                    {% endif %}
+                  </p>
+                  <p class="m-4 answer hidden text-center">
+                    {{ question.answer }}
+                  </p>
+                </div>
+                <div class="modal-footer">
+                    <div class="justify-content-center">
+                      <button type="button" class="btn btn-primary text-center"
+                      onclick="revealAnswer(this)">Reveal Answer</button>
+                      <button type="button" class="btn btn-primary text-center"
+                      onclick="markAnswered(this)">Mark Answer</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Question card ends -->
+        {% endfor %}
+      </div>
+      <!-- Question row ends -->
+      {% endfor %}
+    </div>
+  </body>
+</html>
